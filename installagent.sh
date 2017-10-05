@@ -1,7 +1,7 @@
 if [ -n "$DY_KEY" ]; then
     d_key=$DY_KEY
 fi
-if [ ! $apikey ]; then
+if [ ! $d_key ]; then
     printf "\033[31mAPI key not available in DD_API_KEY environment variable.\033[0m\n"
     exit 1;
 fi
