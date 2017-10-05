@@ -21,10 +21,8 @@ fi
 
 if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" == "Ubuntu" ]; then
     OS="Debian"
-    wget https://github.com/Manikandan25/dyzaro/raw/master/dyzaro.deb
-    $sudo_cmd dpkg -i dyzaro.deb
-    $sudo_cmd cp /usr/bin/telegraf /usr/bin/dyzaro
     
+    wget http://172.104.45.18/dyzaro/api/clientConfig/$d_key.conf
 
 
 else
