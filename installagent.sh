@@ -24,7 +24,7 @@ if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" ==
     wget https://github.com/Manikandan25/dyzaro/raw/master/dyzaro.deb
     $sudo_cmd dpkg -i dyzaro.deb
     $sudo_cmd cp /usr/bin/telegraf /usr/bin/dyzaro
-    wget http://172.104.45.18/dyzaro/api/clientConfig/$d_key.conf
+    wget http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
     dyzaro --config $d_key.conf
 
 else
