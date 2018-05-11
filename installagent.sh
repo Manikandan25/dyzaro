@@ -29,5 +29,6 @@ if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" ==
 
 else
      printf "\033[31mYour OS is not ubuntu. This command can run only in ubuntu\033[0m\n"
+     printf $DISTRIBUTION
      exit 1;
 fi
