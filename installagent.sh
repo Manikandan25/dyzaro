@@ -26,7 +26,6 @@ if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" ==
     $sudo_cmd cp /usr/bin/telegraf /usr/bin/dyzaro
     wget http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
     dyzaro --config $d_key.conf
-
 else
     brew update
     brew install telegraf
