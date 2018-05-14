@@ -27,7 +27,7 @@ if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" ==
     wget http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
     dyzaro --config $d_key.conf
 
-elif [$DISTRIBUTION == "Darwin"]; then
+elif ["$DISTRIBUTION" == "Darwin"]; then
     brew update
     brew install telegraf
     $sudo_cmd cp /usr/local/bin/telegraf /usr/local/bin/dyzaro
