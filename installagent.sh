@@ -34,8 +34,8 @@ elif ["$DISTRIBUTION" == "Darwin"]; then
     curl -O http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
     dyzaro -config $d_key.conf
 else
-    printf "\033[31mYour OS is not ubuntu. This command can run only in ubuntu\033[0m\n"
-    echo $DISTRIBUTION
-    printf "\033[31m$DISTRIBUTION\033[0m\n"
+    #printf "\033[31mYour OS is not ubuntu. This command can run only in ubuntu\033[0m\n"
+    #echo $DISTRIBUTION
+    #printf "\033[31m$DISTRIBUTION\033[0m\n"
     exit 1;
 fi
