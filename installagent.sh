@@ -27,9 +27,5 @@ if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" ==
     wget http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
     dyzaro --config $d_key.conf
 else
-    brew update
-    brew install telegraf
-    $sudo_cmd cp /usr/local/bin/telegraf /usr/local/bin/dyzaro
-    curl -O http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
-    dyzaro -config $d_key.conf
+    printf "\033[31mThis is not ubuntu\033[0m\n"
 fi
