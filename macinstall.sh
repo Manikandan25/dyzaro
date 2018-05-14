@@ -26,6 +26,13 @@ if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" ==
     $sudo_cmd cp /usr/bin/telegraf /usr/bin/dyzaro
     wget http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
     dyzaro --config $d_key.conf
-elif [$DISTRIBUTION=="Darwin"]
+elif [ $DISTRIBUTION = "Darwin" ]; then
     printf "\033[31mIts Darwin\033[0m\n"
+    brew update
+    brew install telegraf
+    sudo cp /usr/local/bin/telegraf /usr/local/bin/dyzaro
+    curl -O http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
+    dyzaro -config $d_key.conf
+else
+    printf "\033[31mCouldn't recognize the OS. Please try again.\033[0m\n"
 fi
