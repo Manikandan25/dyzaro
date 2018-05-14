@@ -28,6 +28,4 @@ if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" ==
     dyzaro --config $d_key.conf
 elif [$DISTRIBUTION=="Darwin"]
     printf "\033[31mIts Darwin\033[0m\n"
-else
-    echo $DISTRIBUTION
 fi
