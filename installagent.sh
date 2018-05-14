@@ -28,11 +28,11 @@ if [ -f /etc/debian_version -o "$DISTRIBUTION" == "Debian" -o "$DISTRIBUTION" ==
     dyzaro --config $d_key.conf
 
 elif [$DISTRIBUTION == "Darwin"]; then
-    wget https://github.com/Manikandan25/dyzaro/raw/master/dyzaro.deb
-    $sudo_cmd dpkg -i dyzaro.deb
-    $sudo_cmd cp /usr/bin/telegraf /usr/bin/dyzaro
-    wget http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
-    dyzaro --config $d_key.conf
+    brew update
+    brew install telegraf
+    $sudo_cmd cp /usr/local/bin/telegraf /usr/local/bin/dyzaro
+    curl -O http://54.153.123.228/dyzaro/api/clientConfig/$d_key.conf
+    dyzaro -config $d_key.conf
 else
     printf "\033[31mYour OS is not ubuntu. This command can run only in ubuntu\033[0m\n"
     echo $DISTRIBUTION
